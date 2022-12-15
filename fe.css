@@ -1,0 +1,81 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+H1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+}
+
+.wrapper{
+    height: 100vh;    /*altura*/
+    overflow-x: hidden;  /*esconde o eixo x lateral nao /*altura*/
+    perspective: 2px;    /* distanciamento do plano de fundo /*altura*/
+    transform-style: preserve-3d;
+}
+.secao {
+    margin: 50px;
+    position: relative; /*relative-pai absolut nos elementos filhos /*altura*/
+    height: 100vh;
+    min-height: 500px; 
+    transform-style: inherit; /*Herança mesma config do elemento pai  /*altura*/
+}
+
+.secao::before{   
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10; /*distanciamento dos dois*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translatez(-1px)scale(1.5);
+}
+
+.conteudo{
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    padding: 20px 10px;
+    background-color:rgba(0, 0, 0, 0.486);
+    color: rgb(252, 240, 240);
+    font-size: 22px;
+    text-align: justify;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 2px 2px 2px; #808080; /*sombra na caixa de texto */
+
+}
+
+.fundo1::before{
+    background-image: url(foto1.png);
+    filter:grayscale(100%);
+}
+
+.fundo2::before{
+    background-image: url(foto2.jpg);
+    filter:grayscale(100%);
+
+}
+
+.fundo3::before{
+    background-image: url(foto6.jpg.crdownload);
+    filter:grayscale(100%);
+
+
+}
+
+.fundo4::before{
+    background-image: url(foto5.jpg);
+    filter:grayscale(100%);
+
+}
+.fundo5::before{
+    background-image: url(foto4.png);
+    filter:grayscale(100%);
+}
