@@ -11,7 +11,7 @@ H1{
 
 .wrapper{
     height: 100vh;    /*altura*/
-    overflow-x: hidden;  /*esconde o eixo x lateral nao /*altura*/
+    overflow: hidden;  /*esconde o eixo x lateral nao /*altura*/
     perspective: 2px;    /* distanciamento do plano de fundo /*altura*/
     transform-style: preserve-3d;
 }
